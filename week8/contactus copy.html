@@ -1,0 +1,65 @@
+<html>
+<title>Contact Form</title>
+<a href="index.html">Home</a>
+<br>
+<a href="page3.html">Pick a Moth!</a>
+<br>
+<a href="page2.html">Comet Moths!</a>
+
+ <head>
+    <script>
+        function getData()
+        {
+                var name = document.getElementById("txtName");
+                var email = document.getElementById("txtEmail");
+                var terms = document.getElementById("txtTerms");
+
+                document.getElementById("finalResult").innerHTML = "Name: " + name.value + " Email: " + email.value + " Terms of Agreement: " + terms.value;
+            name.style.border = "2px black";
+            email.style.border = "2px black";
+            terms.style.border = "2px black";
+        if (name.value == "")
+        {
+            window.alert("Name is Required!");
+            name.focus();
+            name.style.border = "100px solid red";
+        }
+        if (email.value == "")
+        {
+            window.alert("Email is Required!");
+            email.focus();
+             email.style.border = "100px solid red";
+        }
+        if (terms.value == "")
+        {
+            window.alert("Terms of Agreement is Required!");
+            terms.focus();
+             terms.style.border = "100px solid red";
+        }
+        }
+    
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="txtName"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" id="txtEmail"></td>
+        </tr>
+        <tr>
+            <td>Terms of Agreement</td>
+            <td><input type="text" id="txtTerms"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+        </tr>
+    
+    </table>
+    <div id="finalResult"></div>
+</body>
+
+ </html>

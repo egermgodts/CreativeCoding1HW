@@ -1,0 +1,43 @@
+<html>
+<title>form</title>
+<a href="index.html">Home</a>
+<br>
+<a href="page3.html">Pick a Moth!</a>
+<br>
+<a href="page2.html">Comet Moths!</a>
+<br>
+ <head>
+    <script>
+        function Validateform()
+        {
+            if (document.contactinformation.contactname.value =="")
+        {
+            window.alert("Name is Required!")
+        }
+        if (document.contactinformation.email.value =="")
+        {
+            window.alert("Email is Required!")
+        }
+        if (document.contactinformation.terms.value=="")
+        {
+            window.alert("Terms of Agreement is Required!")
+        }
+        }
+    </script>
+</head>
+ <body>
+    <form name="contactinformation" onsubmit="Validateform()">
+        Name: <input type="text" name="contactname">
+        <br>
+        Email: <input type="text" name="email">
+        <br>
+        Terms of Agreement(Type: I agree): <input type="text" name="terms">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+        <span id="myTag">mof</span>
+ </body>
+    <script>
+        document.getElementById("myTag").innerHTML = "Favorite Moth: " + favoritemoth;
+    </script>
+ </html>
