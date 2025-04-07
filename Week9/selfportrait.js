@@ -49,6 +49,5 @@ function draw()
     text('Ella Ermgodts', 250, 590);
 
     //title
-    
     text('Silly Little Ella!',10,30)
 }
