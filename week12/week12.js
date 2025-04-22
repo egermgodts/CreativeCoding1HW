@@ -16,24 +16,28 @@ function setup()
 }
 function draw() 
 {
-
   background(223,8,210);
+  exit();
+  playermove();
+  createplayer();
+  obstacles();
+  obstaclemove();
+  win();
+  mouseobject();
+  
+}
+function exit()
+{
+    fill(0,100,0)
+    rect(470,505,170,70)
+    textSize(32);
+    fill(0);
+    text('EXIT -->', 475, 550);
+}
 
-  fill(0,100,0)
-  rect(470,505,170,70)
-  textSize(32);
-  fill(0);
-  text('EXIT -->', 475, 550);
-
-
-  fill(20,40,0)
-  circle(x1,120,140);
-  if (x1 >= 800 || x1 <= 0) {
-      movement1 *= -1;
-    }
-    x1 += movement1;
-
-  if(keyIsDown(68))
+function playermove()
+{
+ if(keyIsDown(68))
   {
       x+=5;
   }
@@ -49,49 +53,72 @@ function draw()
   {
       y+=5;
   }
-  fill(0,600,500)
-  circle(x,y,25);
-  fill(0)
-  textSize(20)
-  text('You!',x,y)
+}
 
-  fill(100000,0,0)
-  circle(250,200,diameter)
-  fill(0,70,90)
-  circle(150,500,diameter)
-  if(diameter <= 150)
-    {
-        diameter+=.5;
-    }
-      
-    else if(diameter > 150 && diameter <= 300)
-    {
-        diameter +=2;
-        console.log;
-    }
-    else if(diameter > 300)
-    {
-        diameter = 10;
-    }
-
-fill(90,0,35)
-circle(40,y1,50)
-if (y1 >= 800 || y1 <= 0) {
-    movement2 *= -1;
-  }
-  y1 += movement2;
-  
-
-if (x > 590 && y > 505){
+function createplayer()
+{
+    fill(0,600,500)
+    circle(x,y,25);
     fill(0)
-    textSize(100)
-    text("Winner!",150,300)
+    textSize(20)
+    text('You!',x,y)
 }
-  fill(20,0,8)
+
+function obstacles()
+{
+    fill(20,40,0)
+    circle(x1,120,140);
+    fill(100000,0,0)
+    circle(250,200,diameter)
+    fill(0,70,90)
+    circle(150,500,diameter)
+    fill(90,0,35)
+    circle(40,y1,50)
+}
+
+function obstaclemove()
+{
+    if (x1 >= 800 || x1 <= 0) 
+        {
+        movement1 *= -1;
+      }
+       x1 += movement1;
+    
+      if(diameter <= 150)
+        {
+            diameter+=.5;
+        }
+          
+        else if(diameter > 150 && diameter <= 300)
+        {
+            diameter +=2;
+            console.log;
+        }
+        else if(diameter > 300)
+        {
+            diameter = 10;
+        }
+        if (y1 >= 800 || y1 <= 0) {
+            movement2 *= -1;
+          }
+          y1 += movement2;
+    }
+function win()
+{
+    if (x > 590 && y > 505){
+        fill(0)
+        textSize(100)
+        text("Winner!",150,300)
+    }
+}
+
+function mouseobject()
+{
+    fill(20,0,8)
     circle(mousex, mousey, 240);
-
-
 }
+
+
 function mousePressed()
 {
     mousex = mouseX;
