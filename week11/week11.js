@@ -8,7 +8,7 @@ var diameter = 25;
 var mousex = 0;
 var mousey = 0;
 function setup()
-{;
+{
     createCanvas(600,600);
     movement1 = Math.floor(Math.random() * 5) + 1;
     movement2 = Math.floor(Math.random() * 6) + 1;
