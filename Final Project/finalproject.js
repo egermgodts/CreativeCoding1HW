@@ -24,38 +24,38 @@ let w;
 let x;
 let y;
 let z;
-// Load the image and create a p5.Image object.
+
 function preload() {
-  a = loadImage('/Bird Picture/AnnasHummingbird.jpg');
-  b = loadImage('/Bird Picture/BarredOwl.jpg');
-  c = loadImage('/Bird Picture/CrestedCaracara.jpg');
-  d = loadImage('/Bird Picture/Dunlin.jpg');
-  e = loadImage('/Bird Picture/EuropeanStarling.jpg');
-  f = loadImage('/Bird Picture/FerruginousHawk.jpg');
-  g = loadImage('/Bird Picture/GunnisonSageGrouse.jpg');
-  h = loadImage('/Bird Picture/HarrissHawk.jpg');
-  i = loadImage('/Bird Picture/IndianPeafowl.jpg');
-  j = loadImage('/Bird Picture/JuniperTitmouse.jpg');
-  k = loadImage('/Bird Picture/Killdeer.jpg');
-  l = loadImage('/Bird Picture/LaplandLonspur.jpg');
-  m = loadImage('/Bird Picture/Merlin.jpg');
-  n = loadImage('/Bird Picture/NashvilleWarbler.jpg');
-  o = loadImage('/Bird Picture/Osprey.jpg');
-  p = loadImage('/Bird Picture/PipingPlover.jpg');
-  q = loadImage('/Bird Picture/Quetzal.jpg');
-  r = loadImage('/Bird Picture/Razorbill.jpg');
-  s = loadImage('/Bird Picture/StiltSandpiper.jpg');
-  t = loadImage('/Bird Picture/TuftedTitmouse.jpg');
-  u = loadImage('/Bird Picture/UplandSandpiper.jpg');
-  v = loadImage('/Bird Picture/Veery.jpg');
-  w = loadImage('/Bird Picture/Willet.jpg');
-  x = loadImage('/Bird Picture/XinjiangGroundJay.jpg');
-  y = loadImage('/Bird Picture/YellowbelliedSapsucker.jpg');
-  z = loadImage('/Bird Picture/ZonetailedHawk.jpg');
+  a = loadImage('./Bird Picture/AnnasHummingbird.jpg');
+  b = loadImage('./Bird Picture/BarredOwl.jpg');
+  c = loadImage('./Bird Picture/CrestedCaracara.jpg');
+  d = loadImage('./Bird Picture/Dunlin.jpg');
+  e = loadImage('./Bird Picture/EuropeanStarling.jpg');
+  f = loadImage('./Bird Picture/FerruginousHawk.jpg');
+  g = loadImage('./Bird Picture/GunnisonSageGrouse.jpg');
+  h = loadImage('./Bird Picture/HarrissHawk.jpg');
+  i = loadImage('./Bird Picture/IndianPeafowl.jpg');
+  j = loadImage('./Bird Picture/JuniperTitmouse.jpg');
+  k = loadImage('./Bird Picture/Killdeer.jpg');
+  l = loadImage('./Bird Picture/LaplandLonspur.jpg');
+  m = loadImage('./Bird Picture/Merlin.jpg');
+  n = loadImage('./Bird Picture/NashvilleWarbler.jpg');
+  o = loadImage('./Bird Picture/Osprey.jpg');
+  p = loadImage('./Bird Picture/PipingPlover.jpg');
+  q = loadImage('./Bird Picture/Quetzal.jpg');
+  r = loadImage('./Bird Picture/Razorbill.jpg');
+  s = loadImage('./Bird Picture/StiltSandpiper.jpg');
+  t = loadImage('./Bird Picture/TuftedTitmouse.jpg');
+  u = loadImage('./Bird Picture/UplandSandpiper.jpg');
+  v = loadImage('./Bird Picture/Veery.jpg');
+  w = loadImage('./Bird Picture/Willet.jpg');
+  x = loadImage('./Bird Picture/XinjiangGroundJay.jpg');
+  y = loadImage('./Bird Picture/YellowbelliedSapsucker.jpg');
+  z = loadImage('./Bird Picture/ZonetailedHawk.jpg');
 }
 
 function setup() {
-  createCanvas(100, 100);
+  createCanvas(1250, 600);
 }
 
 function draw()
@@ -65,7 +65,27 @@ function draw()
     CrestedCaracara();
     Dunlin();
     EuropeanStarling();
-    
+    FerrunginousHawk();
+    GunnisonSageGrouse();
+    HarrissHawk();
+    IndianPeafowl();
+    JuniperTitmouse();
+    Killdeer();
+    LaplandLongspur();
+    Merlin();
+    NashvilleWarbler();
+    Osprey();
+    PipingPlover();
+    Quetzal();
+    Razorbill();
+    StiltSandpiper();
+    TuftedTitmouse();
+    UplandSandpiper();
+    Veery();
+    Willet();
+    XinjiangGroundJay();
+    YellowBelliedSapsucker();
+    ZoneTailedHawk();
 }
 function AnnasHummingbird()
 {
@@ -169,7 +189,7 @@ function Osprey()
 {
     if(keyIsDown(79))
         {
-            image(0, 25, 25, 1200, 550);
+            image(o, 25, 25, 1200, 550);
         }
 }
 function PipingPlover()
